@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateforme Littéraire</title>
+    <link rel="stylesheet" href="/ZON/css/acceuil.css">
+    <link rel="stylesheet" href="/ZON/css/nav-footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Barre de navigation principale-->
+     <nav class="main-nav">
+        <div class="nav-container">
+            <!--logo du site-->
+            <div class="logo">
+                <a href="#">BookZon </a>
+            </div>
+            <!--menu de navigation-->
+            <ul class="nav-links">
+                <li><a href="/ZON/pages/index.html">Accueil</a></li>
+                <li><a href="/ZON/pages/Users/lecteur.html">Ma bibliothèque</a></li>
+                <li><a href=""> Catégories</a></li>
+                <li><a href="">Post</a></li>
+            </ul>
+            <!-- Icones d'action-->
+             <div class="nav-actions">
+                <a href="" class="search-btn"><i class="fas fa-search"></i></a>
+                <a href="" class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                <a href="/ZON/pages/Auteur/auteur.html" class="user-btn"><i class="fas fa-user"></i></a>
+             </div>
+
+             <!--Bouton menu mobile-->
+             <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+             </div>
+        </div>
+     </nav>
+
+     <!-- Contenu principal-->
+      <main class="main-content">
+        <section class="Describe">
+            <div class="describe-content">
+                <h1>Découvrez des oeuvres uniques , des histoires écrites</h1>
+                <p>Plateforme pour auteurs indépendants et lecteurs passionnés</p>
+                <div class="describe-buttons">
+                    <a href="#recent-books" class="btn primary"> Explorer les livres </a>
+                    <a href="/ZON/pages/Auteur/auteur.html" class="btn secondary">Espace Auteur</a>
+                </div>
+            </div>
+           
+            
+        </section>
+        <!-- sctions des ivres recents-->
+         <section id="recent-books" class="books-section">
+            <h2>Livres Récents</h2>
+            <div class="books-grid">
+
+            </div>
+         </section>
+          <!-- section pour les livre les plus visité: tendance-->
+          <section id="recent-books"  class="books-section">
+            <h2>Tendances</h2>
+            <div class="books-grid">
+
+            </div>
+
+          </section>
+         <!--section des livres à découvrir-->
+         <section id="discover-books" class="books-section">
+            <h2>Découvrir</h2>
+            <div class="books-grid">
+                <div class="book-card">
+                     <!-- couverture, titre du livre, extrait du livre, prix, auteur,nombre de likes, buton pour commentaire et son nombre, ajouter au panier -->
+                </div>
+            </div>
+         </section>
+         <!-- livre par categories-->
+        <section id="recent-books"  class="books-section">
+            <h2>Catégories</h2>
+            <h3>Science-fiction</h3>
+            <div class="books-grid" id="Science-fiction">
+                <div class="book-card">
+                    
+                </div>
+
+            </div>
+            <h3>Histoires</h3>
+            <div class="books-grid" id="Histoires">
+                <div class="book-card">
+
+                </div>
+
+            </div>
+
+            <h3>Technologies</h3>
+            <div class="books-grid" id="Technologies">
+                <div class="book-card">
+                    
+                </div>
+
+            </div>
+            <h3>Entrepreneuriat</h3>
+            <div class="books-grid" id="Entrepreneuriat">
+                <div class="book-card">
+                    
+                </div>
+
+            </div>
+            <h3>Développement Personnel</h3>
+            <div class="books-grid" id="PersonalDevelopment">
+                <div class="book-card">
+                    
+                </div>
+
+            </div>
+            <h3>Marketing</h3>
+            <div class="books-grid" id="Marketing">
+                <div class="book-card">
+                    
+                </div>
+
+            </div>
+        
+        </section>
+       
+        <!--sction des auteurs à suivre-->
+        <section  class="section-auteur" class="books-section">
+            <div class="authors-grid">
+                <!--listes de auteurs à suivre avec : nombre de livre publiés, nombres de lecteurs, button suivre, ave le genre de livre qu'il publie-->
+            </div>
+        </section>
+        <!--section pour les tendances auteur/livre publié / lecteurs, decompt gérer avec java script-->
+      </main>
+
+      <!--Pieds de la page-->
+      <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Plateforme dédiée aux auteurs indépendants et aux lecteurs passionnés</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="">Conditions d'utilisation</a></li>
+                    <li><a href="">Politique de confidentialité</a></li>
+                    <li><a href="">Devenir auteur</a></li>
+                    <li><a href="">Paramètres</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>bookzon@gmail.com</p>
+                <div class="message">
+                    <input type="email" name="email" id="email" placeholder="name@gmail.com">
+                    <input type="text" name="text" id="text" placeholder="Envoyer un message">
+                    <button type="submit">Envoyer</button>
+                </div>
+                <div class="social-links">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 BookZon. Tous droits réservés.</p>
+        </div>
+      </footer>
+</body>
+</html>

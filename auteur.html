@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Auteur</title>
+    <title>Dashboard Auteur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/ZON/css/auteur.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- barre de navigation de l'auteur-->
+         <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Tableau de bord</h2>
+                <div class="toogle-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active" data-target="accueil">
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li data-target="statistiques">
+                    <a href="#"><i class="fas fa-chart-line"></i><span>Statistiques</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-bell"></i>
+                        <span>Alertes <span class="badge">3 </span></span>
+                        <!-- A gerer avec le cmompteur d'alerte-->
+                    </a>
+                </li>
+                <li data-target="publier">
+                    <a href="#">
+                        <i class="fas fa-book"></i>
+                        <span type="span">Publier un livre</span>
+                    </a>
+                </li>
+                <li data-target="parametres">
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <span>Paramètres</span>
+                    </a>
+                </li>
+                <li class="retour">
+                    <a href="/ZON/pages/index.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Retour à l'accueil</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="#">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Se déconnecter</span>
+                    </a>
+                </li>
+            </ul>
+         </aside>
+
+         <!-- main content-->
+          <main class="main-content">
+            <!-- Top de navigation-->
+             <nav class="top-nav">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Rechercher...">
+                </div>
+                <div class="user-profile">
+                    <span>Auteur</span>
+                </div>
+
+             </nav>
+             <!-- contenu des sections-->
+             <div class="content-section active" id="accueil">
+                <h2>Bienvenue sur votre tableau de bord</h2>
+                <p>Gérez vos publications, consultez vos statistiques et restez informé de vos alertes.</p>
+                
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-icon blue">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Livres publiés</h3>
+                        <p class="count">12</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon green">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Lecteurs</h3>
+                        <p class="count">1245</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon orange">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Commentaires</h3>
+                        <p class="count">87</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon red">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3>Alertes</h3>
+                        <p class="count">3</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" id="statistiques">
+                <h2>Statistiques</h2>
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="stats-grid">
+                    <div class="stats-card">
+                        <h3>Lecteurs par mois</h3>
+                        <p>1245</p>
+                        <span class="trend up"><i class="fas fa-arrow-up"></i> 12%</span>
+                    </div>
+                    <div class="stats-card">
+                        <h3>Ventes</h3>
+                        <p>328</p>
+                        <span class="trend up"><i class="fas fa-arrow-up"></i> 5%</span>
+                    </div>
+                    <div class="stats-card">
+                        <h3>Taux d'engagement</h3>
+                        <p>78%</p>
+                        <span class="trend down"><i class="fas fa-arrow-down"></i> 3%</span>
+                    </div>
+                    <div class="stats-card">
+                        <h3>Nouveaux lecteurs</h3>
+                        <p>156</p>
+                        <span class="trend up"><i class="fas fa-arrow-up"></i> 8%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" id="alertes">
+                <h2>Alertes <span class="badge">3</span></h2>
+                <div class="alerts-container">
+                    <div class="alert new">
+                        <div class="alert-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="alert-content">
+                            <h3>Nouveau commentaire</h3>
+                            <p>Vous avez reçu un nouveau commentaire sur votrelivre.</p>
+                            <span class="alert-time">Il y a 2 heures</span>
+                        </div>
+                    </div>
+                    <div class="alert new">
+                        <div class="alert-icon">
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                        <div class="alert-content">
+                            <h3>Votre livre a été ajouté à une liste</h3>
+                            <p>"Les Ombres de Paris" a été ajoute.</p>
+                            <span class="alert-time">Hier</span>
+                        </div>
+                    </div>
+                    <div class="alert">
+                        <div class="alert-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="alert-content">
+                            <h3>Nouveau like</h3>
+                            <p>25 personnes ont aimé votre dernière publication.</p>
+                            <span class="alert-time">Il y a 3 jours</span>
+                        </div>
+                    </div>
+                    <div class="alert">
+                        <div class="alert-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="alert-content">
+                            <h3>Nouveaux abonnés</h3>
+                            <p>Vous avez 12 nouveaux abonnés ce mois-ci.</p>
+                            <span class="alert-time">Il y a 1 semaine</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" id="publier">
+                <h2>Publier un nouveau livre</h2>
+                <form class="publish-form" id="publish-form">
+                    <div class="form-group">
+                        <label for="book-title">Titre du livre</label>
+                        <input type="text" id="book-title" placeholder="Entrez le titre du livre">
+                    </div>
+                    <div class="form-group">
+                        <label for="book-category">Catégorie</label>
+                        <select id="book-category">
+                            <option value="">Sélectionnez une catégorie</option>
+                            <option value="roman">Roman</option>
+                            <option value="science-fiction">Science-fiction</option>
+                            <option value="fantasy">Histoires</option>
+                            <option value="policier">Marketing</option>
+                            <option value="biographie">Developpement personnel</option>
+                            <option value="policier">Entrepreneuriat</option>
+                            <option value="policier">Informatique</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-description">Description</label>
+                        <textarea id="book-description" rows="5" placeholder="Décrivez votre livre"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-cover">Couverture du livre</label>
+                        <input  class="file" type="file" id="book-cover" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        
+                        <label for="book-file">Extrait du livre (PDF)</label>
+                        <input class="file" type="file" id="book-file" accept=".pdf">
+                    </div>
+                    <div class="form-group">
+                        
+                        <label for="book-file">Fichier du livre (PDF)</label>
+                        <input  class="file" type="file" id="book-file" accept=".pdf">
+                    </div>
+
+                    <button type="submit" class="publish-btn">Publier le livre</button>
+                </form>
+            </div>
+            <div class="content-section" id="parametres">
+                <h2>Paramètres du compte</h2>
+                <div class="settings-container">
+                    <div class="settings-tabs">
+                        <button class="tab-btn active" data-tab="profile">Profil</button>
+                        <button class="tab-btn" data-tab="security">Sécurité</button>
+                        <button class="tab-btn" data-tab="notifications">Notifications</button>
+                    </div>
+                    
+                    <div class="settings-content">
+                        <div class="tab-content active" id="profile">
+                            <form class="settings-form">
+                                <div class="form-group">
+                                    <label for="profile-pic">Photo de profil</label>
+                                    <div class="profile-pic-container">
+                                        <img src="https://via.placeholder.com/150" alt="Profile" id="profile-pic-preview">
+                                        <input type="file" id="profile-pic" accept="image/*">
+                                        <label for="profile-pic" class="change-pic-btn">Changer</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="username">Nom d'utilisateur</label>
+                                    <input type="text" id="username" value="Auteur123">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" value="auteur@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="bio">Biographie</label>
+                                    <textarea id="bio" rows="4">Auteur passionné par la littérature contemporaine.</textarea>
+                                </div>
+                                <button type="submit" class="save-btn">Enregistrer</button>
+                            </form>
+                        </div>
+                        
+                        <div class="tab-content" id="security">
+                            <form class="settings-form">
+                                <div class="form-group">
+                                    <label for="current-password">Mot de passe actuel</label>
+                                    <input type="password" id="current-password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-password">Nouveau mot de passe</label>
+                                    <input type="password" id="new-password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-password">Confirmer le nouveau mot de passe</label>
+                                    <input type="password" id="confirm-password">
+                                </div>
+                                <button type="submit" class="save-btn">Mettre à jour le mot de passe</button>
+                            </form>
+                        </div>
+                        
+                        <div class="tab-content" id="notifications">
+                            <form class="settings-form">
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="email-notifications" checked>
+                                    <label for="email-notifications">Notifications par email</label>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="new-comments" checked>
+                                    <label for="new-comments">Nouveaux commentaires</label>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="new-followers" checked>
+                                    <label for="new-followers">Nouveaux abonnés</label>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="promotions">
+                                    <label for="promotions">Promotions et offres spéciales</label>
+                                </div>
+                                <button type="submit" class="save-btn">Enregistrer les préférences</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </main>
+    </div>
+</body>
+</html>

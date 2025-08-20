@@ -1,0 +1,85 @@
+/* style du contenu de la page des lecteurs*/
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+:root{
+    ---primary: #333;
+    ---backgroung1:#f9f9f9;
+    ---nav:#2c3e50;
+    ---blanc:white;
+    ---blue:#3498db;
+    ---rouge:#e74c3c;
+    ---prim:#2980b9;
+    ---second: rgba(255, 255, 255, 0.1);
+    ---footer: #5a5858;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(---primary);
+    background-color:var(---backgroung1) ;
+
+}
+
+.lecteur-content{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.lecteur-tab {
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+.tab-btn {
+    padding: 15px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color:black;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.tab-btn.active {
+    color: #3498db;
+    font-weight: 500;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3498db;
+}
+.tab-content {
+    padding: 20px;
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+.livre ,.panier ,.livre-gratuit{
+    display: flex;
+    justify-content: center;
+}
+.livre{
+    
+}
+/* styles responsives*/
+@media (max-width:) {
+    
+}
